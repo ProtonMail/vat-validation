@@ -8,7 +8,6 @@ export const germany: Country = {
     let product = 10;
     let sum = 0;
     let checkDigit = 0;
-    let expect;
 
     for (let i = 0; i < 8; i++) {
       // Extract the next digit and implement peculiar algorithm!.
@@ -28,7 +27,7 @@ export const germany: Country = {
 
     // Compare it with the last two characters of the VAT number. If the same, then it is a valid
     // check digit.
-    expect = Number(vat.slice(8, 9));
+    const expect = Number(vat.slice(8, 9));
     return checkDigit === expect;
   },
   rules: {

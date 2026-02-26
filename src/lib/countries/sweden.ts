@@ -4,8 +4,6 @@ export const sweden: Country = {
   name: 'Sweden',
   codes: ['SE', 'SWE', '752'],
   calcFn: (vat: string): boolean => {
-    let expect;
-
     // Calculate R where R = R1 + R3 + R5 + R7 + R9, and Ri = INT(Ci/5) + (Ci*2) modulo 10
     let R = 0;
     for (let i = 0; i < 9; i = i + 2) {
@@ -22,7 +20,7 @@ export const sweden: Country = {
     const checkDigit = (10 - ((R + S) % 10)) % 10;
 
     // Compare it with the last character of the VAT number. If it's the same, then it's valid.
-    expect = Number(vat.slice(9, 10));
+    const expect = Number(vat.slice(9, 10));
 
     return checkDigit === expect;
   },

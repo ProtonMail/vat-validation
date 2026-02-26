@@ -4,7 +4,7 @@ export const netherlands: Country = {
   name: 'Netherlands',
   codes: ['NL', 'NLD', '528'],
   calcFn: (input: string): boolean => {
-    const vat = input.replace(/[\ \-\_]/g, '').toUpperCase();
+    const vat = input.replace(/[ \-_]/g, '').toUpperCase();
 
     const { additional, multipliers } = netherlands.rules;
     if (!additional) return false;
