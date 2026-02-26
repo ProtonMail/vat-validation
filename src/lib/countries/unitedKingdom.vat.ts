@@ -1,6 +1,6 @@
 export const name = 'United Kingdom';
 
-export const codes = ['GB', 'GBR', '826'];
+export const codes = ['GB', 'GBR', '826', 'XI'];
 
 export const valid = [
   'GB000472631',
@@ -61,7 +61,11 @@ export const valid = [
   'GB998898400',
   'GB999000005',
   'GB999000047',
-  'GBGD103'
+  'GBGD103',
+  'XI562235945',
+  'XI834549605',
+  'XI100000132',
+  'XIGD103'
 ];
 
 export const validOnlyByFormat = ['GB000000000', 'GB000000001', 'GB000000002', 'GB000000003'];

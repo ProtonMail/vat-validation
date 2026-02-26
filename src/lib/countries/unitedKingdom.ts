@@ -2,7 +2,7 @@ import { Country } from '../vat-validation';
 
 export const unitedKingdom: Country = {
   name: 'United Kingdom',
-  codes: ['GB', 'GBR', '826'],
+  codes: ['GB', 'GBR', '826', 'XI'],
   calcFn: (vat: string): boolean => {
     // Government departments
     if (vat.substr(0, 2) === 'GD') return isGovernmentDepartment(vat);
@@ -17,7 +17,16 @@ export const unitedKingdom: Country = {
     multipliers: {
       common: [8, 7, 6, 5, 4, 3, 2]
     },
-    regex: [/^(GB)?(\d{9})$/, /^(GB)?(\d{12})$/, /^(GB)?(GD\d{3})$/, /^(GB)?(HA\d{3})$/]
+    regex: [
+      /^(GB)?(\d{9})$/,
+      /^(GB)?(\d{12})$/,
+      /^(GB)?(GD\d{3})$/,
+      /^(GB)?(HA\d{3})$/,
+      /^(XI)(\d{9})$/,
+      /^(XI)(\d{12})$/,
+      /^(XI)(GD\d{3})$/,
+      /^(XI)(HA\d{3})$/
+    ]
   }
 };
 
