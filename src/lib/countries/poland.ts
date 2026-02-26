@@ -14,7 +14,7 @@ export const poland: Country = {
     // Establish check digits subtracting modulus 11 from 11.
     total = total % 11;
     if (total > 9) {
-      total = 0;
+      return false;
     }
 
     // Compare it with the last character of the VAT number. If it's the same, then it's valid.
