@@ -1,7 +1,5 @@
-.bithoundrc
 .log
 .travis.yml
-test
 node_modules
 .idea
 .tmp
@@ -9,11 +7,14 @@ node_modules
 coverage
 src
 .editorconfig
-.babelrc
 .npmrc
 .nvmrc
 .gitattributes
 .gitignore
 tsconfig.json
-tslint.json
+tsconfig.test.json
+jest.config.ts
+eslint.config.mjs
+.prettierrc
+.husky
 yarn-error.log

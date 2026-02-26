@@ -26,10 +26,8 @@ VERSION     text
 .eslintrc     text
 
 ## CONFIGS
-.babelrc    text
 .nvmrc    text
 .editorconfig  text
-.eslintignore  text
 .gitattributes text
 .gitconfig     text
 .gitignore     text
