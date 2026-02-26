@@ -102,9 +102,17 @@ function isVatValid(vat: string, country: Country): boolean {
   return country.calcFn(regexResult[2]);
 }
 
-export function checkVAT(vat: string, countriesList: ReadonlyArray<Country> = []): VatCheckResult {
+export interface CheckVATOptions {
+  strict?: boolean;
+}
+
+export function checkVAT(
+  vat: string,
+  countriesList: ReadonlyArray<Country> = [],
+  options?: CheckVATOptions
+): VatCheckResult {
   if (!vat) return makeResult(vat, false);
-  const cleanVAT = removeExtraChars(vat);
+  const cleanVAT = options?.strict ? vat.toUpperCase() : removeExtraChars(vat);
   const country = getCountry(cleanVAT, countriesList);
   const isValid = country ? isVatValid(cleanVAT, country) : false;
   return makeResult(cleanVAT, isValid, country);

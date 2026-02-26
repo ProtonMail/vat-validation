@@ -113,4 +113,4 @@ export {
   unitedKingdom
 } from './lib/countries';
 
-export { checkVAT, Rules, Country, Multipliers, VatCheckResult } from './lib/vat-validation';
+export { checkVAT, Rules, Country, Multipliers, VatCheckResult, CheckVATOptions } from './lib/vat-validation';

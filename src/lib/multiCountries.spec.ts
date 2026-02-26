@@ -1,10 +1,12 @@
 import { unitedKingdom } from './countries/unitedKingdom';
+import { belgium } from './countries/belgium';
 import { brazil } from './countries/brazil';
 import { lithuania } from './countries/lithuania';
 import * as unitedKingdomVat from './countries/unitedKingdom.vat';
 import * as brazilVat from './countries/brazil.vat';
 import * as lithuanianVat from './countries/lithuania.vat';
 import { addCharsToString, checkInvalidVat, checkOnlyValidFormatVat, checkValidVat } from '../test-utils';
+import { checkVAT } from '../index';
 
 const countriesToTest = [brazil, unitedKingdom, lithuania];
 
@@ -78,6 +80,23 @@ describe('Multicountries', () => {
 
     it('should return "false" result for invalid VATs', () => {
       invalid.forEach((vat) => checkInvalidVat(vat, countriesToTest));
+    });
+  });
+
+  describe('Strict mode', () => {
+    it('should reject VAT numbers with extra characters when strict is true', () => {
+      const result = checkVAT('BE0411-905847', [belgium], { strict: true });
+      expect(result.isValid).toBe(false);
+    });
+
+    it('should accept VAT numbers with extra characters when strict is false', () => {
+      const result = checkVAT('BE0411-905847', [belgium]);
+      expect(result.isValid).toBe(true);
+    });
+
+    it('should accept clean VAT numbers in strict mode', () => {
+      const result = checkVAT('BE0411905847', [belgium], { strict: true });
+      expect(result.isValid).toBe(true);
     });
   });
 });
