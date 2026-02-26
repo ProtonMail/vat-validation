@@ -9,8 +9,6 @@ export function checkValidVat(
 ): void {
   const result = checkVAT(vat, countriesList);
 
-  if (!result.isValid) console.info('Invalid VAT:', vat);
-
   expect(result.isValid).toBe(true);
   expect(result.isSupportedCountry).toBe(true);
   expect(result.isValidFormat).toBe(true);
@@ -24,7 +22,6 @@ export function checkValidVat(
 
 export function checkInvalidVat(vat: string, countriesList: ReadonlyArray<Country>): void {
   const result = checkVAT(vat, countriesList);
-  if (result.isValid) console.info('Following VAT should be invalid:', vat);
   expect(result.isValid).toBe(false);
 }
 
@@ -35,8 +32,6 @@ export function checkOnlyValidFormatVat(
   _name?: string
 ): void {
   const result = checkVAT(vat, countriesList);
-
-  if (!result.isValid) console.info('Invalid VAT:', vat);
 
   expect(result.isValid).toBe(false);
   expect(result.isSupportedCountry).toBe(true);

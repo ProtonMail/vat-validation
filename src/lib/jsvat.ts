@@ -16,7 +16,7 @@ export interface Rules {
 export interface Country {
   name: string;
   codes: ReadonlyArray<string>;
-  calcFn: (vat: string, options?: { readonly [key: string]: any }) => boolean;
+  calcFn: (vat: string, options?: { readonly [key: string]: unknown }) => boolean;
   rules: Rules;
 }
 

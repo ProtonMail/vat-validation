@@ -1,12 +1,6 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/se-panfilov/jsvat/badge.svg?targetFile=package.json)](https://snyk.io/test/github/se-panfilov/jsvat?targetFile=package.json)
-[![Code Climate](https://codeclimate.com/github/se-panfilov/jsvat/badges/gpa.svg)](https://codeclimate.com/github/se-panfilov/jsvat)
-[![Build Status](https://travis-ci.org/se-panfilov/jsvat.svg?branch=master)](https://travis-ci.org/se-panfilov/jsvat)
 [![npm version](https://badge.fury.io/js/jsvat.svg)](http://badge.fury.io/js/jsvat)
-[![devDependency Status](https://david-dm.org/se-panfilov/jsvat/dev-status.svg)](https://david-dm.org/se-panfilov/jsvat#info=devDependencies)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/se-panfilov/jsvat/blob/master/LICENSE)
-
-[![NPM](https://nodei.co/npm/jsvat.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/jsvat/)
-[![Package Quality](http://npm.packagequality.com/badge/jsvat.png)](http://packagequality.com/#?package=jsvat)
 
 ## jsvat
 
