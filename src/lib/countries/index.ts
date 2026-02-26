@@ -28,6 +28,7 @@ export { portugal } from './portugal';
 export { romania } from './romania';
 export { russia } from './russia';
 export { serbia } from './serbia';
+export { singapore } from './singapore';
 export { slovakiaRepublic } from './slovakiaRepublic';
 export { slovenia } from './slovenia';
 export { spain } from './spain';
