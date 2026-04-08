@@ -1,6 +1,6 @@
 {
   "name": "vat-validation",
-  "version": "3.0.0-beta.3",
+  "version": "3.0.0",
   "description": "Check the validity of a VAT number",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
